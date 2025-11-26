@@ -1,9 +1,14 @@
 from soldier import Soldier
 
 class Room:
+    room_id = 1
+    
     def __init__(self, max_soldiers_capacity=8):
         self.soldiers = []
         self.max_soldiers_capacity = max_soldiers_capacity
+        self.room_id = Room.room_id
+
+        Room.room_id += 1
 
     def add_soldier(self, soldier: Soldier) -> bool | None:
         if not self.enough_capacity_for_adding:

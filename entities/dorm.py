@@ -1,16 +1,22 @@
 from room import Room
 
 class Dorm:
+    dorm_id = 1
+
     def __init__(self, max_rooms_capacity=10):
         self.rooms = []
         self.max_rooms_capacity = max_rooms_capacity
+        self.dorm_id = Dorm.dorm_id
 
-    def add_room(self, room: Room) -> bool | None:
+        Dorm.dorm_id += 1
+
+    def add_room(self) -> bool | None:
         if not self.enough_capacity_for_adding:
             return False
-        self.rooms.append(room)
+        new_room = Room()
+        self.rooms.append(new_room)
 
-    def remove_soldier(self, room_to_remove: Room) -> bool | None:
+    def remove_room(self, room_to_remove: Room) -> bool | None:
         if not self.has_rooms:
             return False
         self.rooms = [room for room in self.rooms if room != room_to_remove]

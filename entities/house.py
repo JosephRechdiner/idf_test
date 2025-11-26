@@ -5,10 +5,11 @@ class House:
         self.dorms = []
         self.max_dorms_capacity = max_dorms_capacity
 
-    def add_dorm(self, dorm: Dorm) -> bool | None:
+    def add_dorm(self) -> bool | None:
         if not self.enough_capacity_for_adding:
             return False
-        self.dorms.append(dorm)
+        new_dorm = Dorm()
+        self.dorms.append(new_dorm)
 
     def remove_dorm(self, dorm_to_remove: Dorm) -> bool | None:
         if not self.has_dorms:
