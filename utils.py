@@ -11,4 +11,20 @@ def sorting_soldiers(soldiers: list[Soldier]):
             break
     return soldiers
 
-# ["distance"]
+def preper_inserted_not_inserted(inserted, not_inserted):
+    total_inserted = len(inserted)
+    total_not_inserted = len(not_inserted)
+    
+    result = []
+
+    for soldier in inserted:
+        result.append(soldier)
+
+    for soldier in not_inserted:
+        result.append(soldier)
+
+    return {
+        "total_inserted": total_inserted,
+        "total_not_inserted": total_not_inserted,
+        "all_soldiers": result
+    }

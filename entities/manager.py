@@ -54,12 +54,16 @@ class HouseInserter:
             HouseManager.add_soldier_to_room(soldiers[i], room_to_insert)
             inserted.append({
                 "details": soldiers[i],
+                "has_room": "Yes!",
                 "dorm_number": dorm_to_insert.dorm_id,
                 "room_number": room_to_insert.room_id
                 })
                  
         for i in range(first_not_inserted_soldier_idx, len(soldiers)):
-            not_inserted.append(soldiers[i])
+            not_inserted.append({
+                "details": soldiers[i],
+                "has_room": "No!",
+                })
             HouseManager.add_soldier_to_wating_list(wating_list, soldiers[i])
 
         return inserted, not_inserted

@@ -8,9 +8,7 @@ class Soldier:
         self.distance = distance
         self.has_room = False
 
-    def set_has_room(self) -> bool | None:
-        if self.does_have_room:
-            return False
+    def set_has_room(self) -> None:
         self.has_room = True
 
     def reset_has_room(self) -> bool | None:
