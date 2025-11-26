@@ -27,3 +27,12 @@ class Room:
     
     def has_soldiers(self) -> bool:
         return len(self.soldiers) > 0
+    
+    def is_full(self):
+        return len(self.soldiers) == self.max_soldiers_capacity
+    
+    def is_empty(self):
+        return len(self.soldiers) == 0
+    
+    def is_not_full_not_empty(self):
+        return not self.is_empty() and not self.is_full()

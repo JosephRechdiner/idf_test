@@ -23,6 +23,18 @@ class HouseManager:
 
     def show_soldiers(house):
         return house.get_all_soldiers()
+    
+    def show_amount_full_rooms(house):
+        return house.get_amount_full_rooms()
+    
+    def show_amount_empty_rooms(house):
+        return len(house.get_amount_empty_rooms())
+
+    def show_amount_not_empty_not_full_rooms(house):
+        return len(house.get_amount_full_rooms())
+    
+    def show_wating_list(house):
+        return house.
 
 
 class HouseInserter:

@@ -23,6 +23,9 @@ class House:
     def has_dorms(self) -> bool:
         return len(self.dorms) > 0
     
+    def get_house(self):
+        return self
+    
     def get_all_soldiers(self):
         result = []
         for dorm in self.dorms:
@@ -30,3 +33,28 @@ class House:
                 for soldier in room.soldiers:
                     result.append(soldier)
         return result
+    
+    def get_all_full_rooms(self):
+        result = []
+        for dorm in self.dorms:
+            for room in dorm.rooms:
+                if room.is_full:
+                    result.append(room)
+        return result
+
+    def get_all_empty_rooms(self):
+        result = []
+        for dorm in self.dorms:
+            for room in dorm.rooms:
+                if room.is_empty():
+                    result.append(room)
+        return result
+
+    def get_all_not_full_not_empty_rooms(self):
+        result = []
+        for dorm in self.dorms:
+            for room in dorm.rooms:
+                if room.is_not_full_not_empty:
+                    result.append(room)
+        return result
+    
