@@ -32,10 +32,6 @@ class HouseManager:
 
     def show_amount_not_empty_not_full_rooms(house):
         return len(house.get_amount_full_rooms())
-    
-    def show_wating_list(house):
-        return house.
-
 
 class HouseInserter:
     def insert_soldiers_to_house(soldiers: list[Soldier]):
