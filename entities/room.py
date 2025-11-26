@@ -18,7 +18,7 @@ class Room:
         self.soldiers = [soldier for soldier in self.soldiers if soldier != soldier_to_remove]
 
     def enough_capacity_for_adding(self) -> bool:
-        return len(self.soldiers) <= self.max_soldiers_capacity
+        return len(self.soldiers) < self.max_soldiers_capacity
     
     def has_soldiers(self) -> bool:
-        return len(self.soldiers) >= 0
+        return len(self.soldiers) > 0

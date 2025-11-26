@@ -5,6 +5,7 @@ class WatingList:
         self.soldiers = []
 
     def add_soldier(self, soldier: Soldier) -> None:
+        # Based on: no limit capacity
         self.soldiers.append(soldier)
 
     def remove_soldier(self, soldier_to_remover: Soldier) -> bool | None:
