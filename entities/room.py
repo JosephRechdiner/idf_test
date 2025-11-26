@@ -8,7 +8,7 @@ class Room:
     def add_soldier(self, soldier: Soldier) -> bool | None:
         if not self.enough_capacity_for_adding:
             return False
-        soldier.set_room()
+        soldier.set_has_room()
         self.soldiers.append(soldier)
 
     def remove_soldier(self, soldier_to_remove: Soldier) -> bool | None:
