@@ -26,3 +26,4 @@ def convert_csv_to_objects(file: File):
         all_soldiers.append(new_soldier)
 
     return all_soldiers
+
