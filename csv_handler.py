@@ -16,14 +16,13 @@ def convert_csv_to_objects(file: File):
     all_soldiers = []
     for row in rows:
         new_soldier = Soldier(
-            personal_number=row[0],
-            first_name=rows[1],
+            personal_number=int(row[0]),
+            first_name=row[1],
             last_name=row[2],
             gender=row[3],
             city=row[4],
-            distance=row[5]
+            distance=int(row[5])
             )
         all_soldiers.append(new_soldier)
 
     return all_soldiers
-

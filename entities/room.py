@@ -1,7 +1,7 @@
-from soldier import Soldier
+from entities.soldier import Soldier
 
 class Room:
-    room_id = 1
+    room_id = 0
     
     def __init__(self, max_soldiers_capacity=8):
         self.soldiers = []

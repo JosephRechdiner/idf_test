@@ -1,4 +1,4 @@
-from soldier import Soldier
+from entities.soldier import Soldier
 
 class WatingList:
     def __init__(self):
@@ -15,3 +15,6 @@ class WatingList:
 
     def has_soldiers(self) -> bool:
         return len(self.soldiers)
+    
+    def get_all_soldier(self):
+        return self.soldiers

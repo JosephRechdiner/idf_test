@@ -1,15 +1,16 @@
-from dorm import Dorm
+from entities.dorm import Dorm
 
 class House:
     def __init__(self, max_dorms_capacity=2):
         self.dorms = []
         self.max_dorms_capacity = max_dorms_capacity
 
-    def add_dorm(self) -> bool | None:
+    def add_dorm(self) -> bool | Dorm:
         if not self.enough_capacity_for_adding:
             return False
         new_dorm = Dorm()
         self.dorms.append(new_dorm)
+        return new_dorm
 
     def remove_dorm(self, dorm_to_remove: Dorm) -> bool | None:
         if not self.has_dorms:
@@ -21,3 +22,11 @@ class House:
     
     def has_dorms(self) -> bool:
         return len(self.dorms) > 0
+    
+    def get_all_soldiers(self):
+        result = []
+        for dorm in self.dorms:
+            for room in dorm.rooms:
+                for soldier in room.soldiers:
+                    result.append(soldier)
+        return result

@@ -10,3 +10,5 @@ def sorting_soldiers(soldiers: list[Soldier]):
         if not swapped:
             break
     return soldiers
+
+# ["distance"]
